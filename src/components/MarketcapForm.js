@@ -10,7 +10,7 @@ function MarketcapForm() {
         placeholder='Enter Current Price'
         value={input}
         name='current-price'
-        className='current-price-input'
+        className='current-price-input' 
         />
         <input
         type='number'
