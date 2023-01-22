@@ -1,32 +1,38 @@
-import React, {useState} from 'react'
-
 function MarketcapForm() {
-    const [input, setInput] = useState('');
-
   return (
-    <form className='marketcap-form'>
-        <input
-        type='number'
-        placeholder='Enter Current Price'
-        value={input}
-        name='current-price'
-        className='current-price-input' 
-        />
-        <input
-        type='number'
-        placeholder='Enter Circulating Supply'
-        value={input}
-        name='circulating-supply'
-        className='circulating-supply-input'
-        />
-        <button  className='enter-button'>
-            Calculate
-        </button>
 
-
-    </form>
+    
+    <table width='80%' border='0'>
+        <tr>
+          <th>Current Price</th>
+          <th>Circulating Supply</th>
+          <th>Marketcap</th>
+        </tr>
+        <tr>
+          <td><input id='currentPrice' type='text' oninput='MarketCapProduct()'></input></td>
+          <td><input id='circulatingSupply' type='text' oninput='MarketCapPro()'></input></td>
+          <td><input id='result'></input></td>
+        </tr>
+        <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+  </tr>
+    </table>
+    
+ 
   )
 }
+
+
+/*function calculate() {
+  var currentPrice = document.getElementById('currentPrice').value;
+  var circulatingSupply = document.getElementById('circulatingSupply').value;
+  var result = document.getElementById('result');
+  var marketCap = currentPrice * circulatingSupply;
+  result.value = marketCap;
+}
+*/
 
 export default MarketcapForm
 
